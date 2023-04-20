@@ -1,0 +1,25 @@
+function countdown(num) {
+    if (num <= 0) {
+      console.log("Done");
+    } else {
+      console.log(num);
+      num--;
+  
+      setTimeout(function () {
+        countdown(num);
+      }, 1000);
+    }
+  }
+
+  function randomGame(){
+    let timer=0;
+    let intervalID=setInterval(function ()){
+        const randomNum=Math.random();
+        timer++;
+    
+    if(randomNum>0.75){
+        clearInterval(intervalID);
+        console.log('It took ${timer} tries to find a number greater than 0.75')
+    }
+    },1000);
+  }
